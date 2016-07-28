@@ -11,6 +11,17 @@ With three numbers (or more) you can use the same technique. For more
 information, see this
 [Wikipedia article](https://en.wikipedia.org/wiki/Z-order_curve).
 
+As an example, the indices `2**21-1`, `2**3-1` and 0 have the following bit representation:
+
+    00000000000111111111111111111111 (2**21-1)
+    00000000000000000000000000000111 (2**3-1)
+    00000000000000000000000000000000 (0)
+
+The corresponding 64-bit morton number is 1317624576693539547, which has the
+following bit representation:
+
+    0001001001001001001001001001001001001001001001001001001011011011
+
 ## Input range
 
 In 2D, the indices can be at most `2**31 - 1 = 2147483647`, which is also the
