@@ -5,8 +5,8 @@ back, in 2D and 3D. The morton numbers are stored as 64-bit integers.
 
 ## What are morton numbers?
 
-If you have two numbers with bit patterns `a1 a2 a3` and `b1 b2 b3`, you can
-combine them into a number with a longer bit pattern as `a1 b1 a2 b2 a3 b3`.
+If you have two numbers with bit patterns `a3 a2 a1` and `b3 b2 b1`, you can
+combine them into a number with a longer bit pattern as `b3 a3 b2 a2 b1 a1`.
 With three numbers (or more) you can use the same technique. For more
 information, see this
 [Wikipedia article](https://en.wikipedia.org/wiki/Z-order_curve).
