@@ -378,7 +378,7 @@ contains
     integer, intent(in) :: x
     integer             :: n
 
-    do n = 0, bit_size(x)-1
+    do n = bit_size(x)-1, 0, -1
        if (btest(x, n)) then
           write(*, "(A)", advance="NO") "1"
        else
@@ -393,7 +393,7 @@ contains
     integer(int64), intent(in) :: x
     integer                    :: n
 
-    do n = 0, bit_size(x)-1
+    do n = bit_size(x)-1, 0, -1
        if (btest(x, n)) then
           write(*, "(A)", advance="NO") "1"
        else
