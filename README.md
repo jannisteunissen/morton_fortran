@@ -41,4 +41,4 @@ maximum value of a 32-bit signed integer. In 3D the indices can be at most
     ix2 = morton_to_ix2(m_ix) ! 2D
     ix3 = morton_to_ix3(m_ix) ! 3D
 
-Also see `test_morton.f90`.
+Also see [test_morton.f90](test_morton.f90).
