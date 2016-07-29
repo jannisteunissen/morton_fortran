@@ -34,8 +34,8 @@ maximum value of a 32-bit signed integer. In 3D the indices can be at most
     integer        :: ix2(2), ix3(3)
     
     ! Convert indices to morton numbers
-    m_ix = morton_from_ix2(ix) ! 2D
-    m_ix = morton_from_ix3(ix) ! 3D
+    m_ix = morton_from_ix2(ix2) ! 2D
+    m_ix = morton_from_ix3(ix3) ! 3D
     
     ! Convert morton numbers to indices
     ix2 = morton_to_ix2(m_ix) ! 2D
