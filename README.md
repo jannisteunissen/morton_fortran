@@ -32,13 +32,25 @@ maximum value of a 32-bit signed integer. In 3D the indices can be at most
 
     integer(int64) :: m_ix ! The morton number
     integer        :: ix2(2), ix3(3)
-    
+
     ! Convert indices to morton numbers
     m_ix = morton_from_ix2(ix) ! 2D
     m_ix = morton_from_ix3(ix) ! 3D
-    
+
     ! Convert morton numbers to indices
     ix2 = morton_to_ix2(m_ix) ! 2D
     ix3 = morton_to_ix3(m_ix) ! 3D
 
 Also see `test_morton.f90`.
+
+## Algorithm
+
+The code uses the *magic bits* method, see
+[this page](http://www.forceflow.be/2013/10/07/morton-encodingdecoding-through-bit-interleaving-implementations/).
+The cost for a 64-bit number is about `log2(64)` steps, each comprising of a bit
+shift, `OR` and `AND` operation.
+
+## Links
+
+* [Comparison of algorithms](http://www.forceflow.be/2016/01/18/libmorton-a-library-for-morton-order-encoding-decoding/)
+* C++ header library [libmorton](https://github.com/Forceflow/libmorton)
