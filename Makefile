@@ -8,7 +8,7 @@ OBJS	:= m_morton.o
 all: 	test_morton
 
 clean:
-	$(RM) test_m_morton
+	$(RM) test_morton
 
 # Dependency information
 test_morton:	m_morton.o
