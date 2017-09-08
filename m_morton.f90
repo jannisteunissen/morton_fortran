@@ -93,18 +93,21 @@ contains
     i_min = 1
     i_max = size(list)
 
-    do while (i_min < i_max)
+    do while (i_min <= i_max)
        i_middle = i_min + (i_max - i_min) / 2
 
-       if (val <= list(i_middle)) then
-          i_max = i_middle
-       else
+       if (val < list(i_middle)) then
+          i_max = i_middle - 1
+       else if (val > list(i_middle)) then
           i_min = i_middle + 1
+       else
+          ix = i_middle
+          return
        end if
     end do
 
-    ix = i_min
-    if (val > list(ix)) ix = -1
+    ! Failed
+    ix = -1
   end function morton_bsearch
 
   ! Add two "zero" bits between each bit of the input. Because the result has 64
