@@ -3,6 +3,14 @@
 This module can be used to convert non-negative indices to morton numbers and
 back, in 2D and 3D. The morton numbers are stored as 64-bit integers.
 
+The functionality in this module:
+
+* Convert an index (i, j) or (i, j, k) to a Morton number
+* Convert a Morton number to an index (i, j) or (i, j, k)
+* Sort a list of Morton numbers
+* Binary search in a sorted list of Morton numbers
+* Print the individual bits of a 32/64 bit integer
+
 ## What are morton numbers?
 
 If you have two numbers with bit patterns `a3 a2 a1` and `b3 b2 b1`, you can
